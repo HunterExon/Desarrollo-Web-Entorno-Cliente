@@ -1,6 +1,7 @@
 let cont = 0;
 let regex;
 
+
 window.onload = start;
 
 function start() {
@@ -8,9 +9,7 @@ function start() {
         let check = confirm("¿Enviar Formulario?");
         cont++;
 
-        let d = new Date();
-        d.setTime(d.getTime() + 1 * 24 * 60 * 60 * 1000);
-        document.cookie = "contador" + "=" + cont + ";" + "expires=" + d.toUTCString() + ";path=/";
+        set_cookie("intentos", intentos, 1);
 
         document.getElementById('intentos').innerHTML = "Intentos de envío: " + cont;
 
@@ -168,4 +167,35 @@ function error(element) {
 
 function clear(element) {
     element.className = "";
+}
+
+function get_cookie(nombre) {
+    let nom = nombre + "=";
+    let array = document.cookie.split(";");
+
+    for (let i = 0; i < array.length; i++) {
+      let c = array[i];
+      console.log(c);
+      while (c.charAt(0) == " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(nom) == 0) {
+        return c.substring(nom.length);
+      }
+    }
+    return "";
+  }
+
+let set_cookie = (nombre, valor, expiracion) => {
+    if (get_cookie("contador") == "") {
+        let d = new Date();
+        d.setTime(d.getTime() + expiracion * 24 * 60 * 60 * 1000);
+        expiracion = "expires=" + d.toUTCString();
+        document.cookie = nombre + "=" + valor + ";" + expiracion + ";path=/";
+    } else {
+        let d = new Date();
+        d.setTime(d.getTime() + expiracion * 24 * 60 * 60 * 1000);
+        expiracion = "expires=" + d.toUTCString();
+        document.cookie = nombre + "=" + (Number(get_cookie("contador"))+1) + ";" + expiracion + ";path=/";
+    }
 }
