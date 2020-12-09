@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen U4 B</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <fieldset>
+    <legend>Kill Team</legend>
+    <form name="form" id="form" action="http://www.google.es" method="get">
+
+      <label for="name">Nombre: </label>
+      <input type="text" name="name" id="name">
+
+      <label for="age">Año: </label>
+      <input type="text" name="age" id="age" maxlength="4">
+
+      <label for="skill">Habilidad: </label>
+      <input name="skill" type="text" id="skill">
+
+      <label for="wound">Tirada para herir: </label>
+      <input name="wound" type="text" id="wound">
+
+      <label for="rol">Rol: </label>
+      <select name="rol" id="rol">
+        <option value="1">Líder</option>
+        <option value="2">Combate</option>
+        <option value="3">Comunicaciones</option>
+        <option value="4">Demoliciones</option>
+        <option value="5">Fanático</option>
+      </select>
+
+      <label for="pass">Contraseña: </label>
+      <input type="password" id="pass" name="pass">
+
+      <input type="reset" name="cls" id="button" value="Borrar Todo">
+      <input type="button" name="send" id="send" value="Enviar Ficha">
+    </form>
+
+    <div id="error"></div>
+    <div id="last_dice"></div>
+
+  </fieldset>
+  <script type="text/javascript" src="examen_u4_b.js" defer></script>
+</body>
+
+</html>
