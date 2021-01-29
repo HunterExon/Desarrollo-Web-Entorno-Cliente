@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entregable_T5
+        </title>
+        <script src="Entregable_T5.js" defer></script>
+    </head>
+
+    <body>
+        <form>
+            <label>Cantidad de Columnas: </label>
+            <input type="text" id="create_col">
+
+            <br>
+            
+            <label>Cantidad de filas: </label>
+            <input type="text" id="create_row">
+            
+            <br>
+
+            <label>Cabecera: </label>
+            <input type="checkbox" id="create_header">
+            <div id="inputs_headers">
+
+            </div>
+
+            <br>
+
+            <label>Valor por defecto: </label>
+            <input type="text" id="default_value">
+
+            <br>
+
+            <label>Grosor de Borde: </label>
+            <input type="text" id="border_width">
+            
+            <br>
+            
+            <label>Color de Borde: </label>   
+                <select name="border_color" id="border_color">
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="black" selected>Negro</option>
+                </select>
+            
+            <br>
+            
+            <input type="button" value="Generar Tabla" onclick="generate_table()"/>
+        </form>
+        <br>
+    </body>
+</html>
