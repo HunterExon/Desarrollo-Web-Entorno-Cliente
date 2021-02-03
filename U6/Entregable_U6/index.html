@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entregable_U6</title>
+    <script src="scripts.js" defer></script>
+    <style>
+      img{
+        width: 100px;
+      }
+      table, th, tr, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <label>Seleccionar Facción </label>   
+    <select name="faction" class="faction">
+        <option value="default" selected="selected">Seleccione un bando</option>
+        <option value="alie">Aliados</option>
+        <option value="axie">Eje</option>
+    </select>
+    
+    <br>
+    
+    <input type="button" id="fetch" value="Mostrar por Fetch"></input>
+
+    <input type="button" id="xml" value="Mostrar por XMLHttpRequest"></input>
+    <div id="tabla">
+
+    </div>
+  </body>
+</html>
