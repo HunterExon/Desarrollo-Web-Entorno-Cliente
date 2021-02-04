@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen_U6</title>
+    <script src="scripts.js" defer></script>
+    <style>
+      table, th, tr, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="print_data">
+      <label for="ccaa">CC.AA.: </label>
+      <select name="ccaa" class="ccaa" id="ccaa">
+
+      </select>
+      <br>
+      <label for="dosisEntregadas">D.Entregadas: </label>
+      <input type="number" name="dosisEntregadas" id="dosisEntregadas"/>
+      <br>
+      <label for="dosisAdministradas">D.Adminin.: </label>
+      <input type="number" name="dosisAdministradas" id="dosisAdministradas"/>
+      <br>
+      <label for="dosisPautaCompletada">D.Completa: </label>
+      <input type="number" name="dosisPautaCompletada" id="dosisPautaCompletada"/>
+      <br>
+      <label for="porcentajeEntregadas">P.Entregadas: </label>
+      <input type="number" name="porcentajeEntregadas" id="porcentajeEntregadas"/>
+      <br>
+      <label for="porcentajePoblacionAdministradas">P.Admin.: </label>
+      <input type="number" name="porcentajePoblacionAdministradas" id="porcentajePoblacionAdministradas"/>
+      <br>
+      <label for="porcentajePoblacionCompletas">P.Completa: </label>
+      <input type="number" name="porcentajePoblacionCompletas" id="porcentajePoblacionCompletas"/>
+      <br>
+      <input type="button" id="modificar_datos" value="Modificar Datos"></input>
+    </div>
+
+    <hr>
+
+    <p>Resultados</p>
+    <div id="resultado">
+
+    </div>
+
+    <hr>
+
+    <h1>Tabla de vacunación</h1>
+    <input type="button" id="xml" value="Cargar datos vacunación (XMLHttpRequest)"></input>
+    <input type="button" id="fetch" value="Cargar datos vacunación (Fetch)"></input>
+
+    <br>
+    <br>
+    
+    <div id="tabla">
+
+    </div>
+  </body>
+</html>
