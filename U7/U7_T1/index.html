@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U7 - Ejercicio 1</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <label for="st_slc">AREA DE ALMACENAMIENTO</label>
+    <select id="st_slc" name="st_slc">
+        <option selected="selected">LOCAL</option>
+        <option>SESIÓN</option>
+    </select>
+    <br>
+    <label for="pk_input">CLAVE:</label>
+    <input type="text" name="pk_input" id="pk_input">
+    <br>
+    <label for="vl_input">VALOR:</label>
+    <input type="text" name="vl_input" id="vl_input">
+    <br>
+    <br>
+    <input type="button" value="GUARDAR" id="sv_btn">
+    <input type="button" value="ELIMINAR" id="dlt_btn">
+    <input type="button" value="REFRESCAR" id="rf_btn">
+    <input type="button" value="COMPROBAR COMPATIBILIDAD DEL NAVEGADOR" id="cpt_btn">
+    <br>
+    <br>
+    <label for="lc_area">CLAVES Y VALORES EN LOCAL STORAGE</label>
+    <label for="ss_area">CLAVES Y VALORES EN SESSION STORAGE</label>
+    <br>
+    <textarea name="textarea" rows="10" cols="50" id="lc_area"></textarea>
+    <textarea name="textarea" rows="10" cols="50" id="ss_area"></textarea>
+    <br>
+    <br>
+    <div id="show_all"></div>
+</body>
+</html>
